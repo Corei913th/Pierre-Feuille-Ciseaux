@@ -1,0 +1,274 @@
+:root{
+    --primary: #695aea;
+    --secondary: #9e15e8;
+    --back: #fff;
+    --action: #ff6565;
+    --border-radius: 15px;
+    --btn-padding: 15px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.4s ease-out;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+   /* background: linear-gradient(43deg,#695aea 15%, #C850C0 70%, #825fa9  100%);*/
+   background: #ffffff;
+    background-attachment: fixed;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@keyframes begin {
+    from{
+        transform: translateY(-1000px) scale(0.5);
+        z-index: 1000;
+    }
+}
+
+.UserInfo{
+    display: block;
+    width: 420px;
+    max-width: 500px;
+    margin: 200px auto;
+    border-radius: 15px;
+    height: fit-content;
+    padding: 50px;
+    background: var(--back);
+    border-radius: 15px;
+    box-shadow: 3px 3px 11px var(--primary),  3px 3px 5px var(--secondary);
+    animation: begin 0.7s linear forwards;
+    visibility: visible;
+    text-align: center;
+}
+
+.UserInfo h3{
+    color: var(--primary);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.UserInfo .inputBtn{
+    display: flex;
+    padding-top: 15px;
+}
+
+.UserInfo.active{
+   display: none;
+   animation: begin 0.7s linear forwards;
+}
+
+.UserInfo input{
+    width: 300px;
+    height: 45px;
+    outline: none;
+    text-align: center;
+    border: 2px solid var(--primary);
+    font-weight: bold;
+    color: var(--primary);
+    border-radius: 10px 0px 0px 10px;
+    text-transform: uppercase;
+    border-right: none;
+}
+
+.UserInfo button{
+    width: 100px;
+    background: var(--primary);
+    color: var(--back);
+    border: 2px solid transparent;
+    outline: none;
+    font-weight: bold;
+    border-radius: 0px 10px 10px 0px;
+}
+
+.UserInfo button:hover{
+    background: #ffffff;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+}
+
+.score{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 190px);
+    gap: 20px;
+    background: #ffffff;
+    text-align: center;
+    font-size: 30px;
+    color: var(--primary);
+    font-weight:700;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow:  3px 3px 8px 0px;
+    animation: begin 0.7s linear forwards;
+    visibility: hidden;
+}
+
+.score #user{
+    text-transform: uppercase;
+}
+
+.score.active{
+    visibility:visible;
+    animation: begin 0.7s linear forwards;
+}
+
+#reset{
+    font-size: 14px;
+    grid-column: span 2;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--action);
+    display: none;
+}
+
+#reset.active{
+    display: block;
+}
+
+#reset:hover{
+    color: brown;
+    font-size: 16px;
+}
+
+.action{
+    margin-bottom: 40px;
+    text-align: center;
+    visibility: hidden;
+    animation: begin 0.7s linear forwards;
+}
+
+.action.active{
+    visibility: visible;
+    animation: begin 0.7s linear forwards;
+}
+
+#message{
+    font-size: 25px;
+    color: var(--action);
+}
+
+#next{
+    margin-top: 15px;
+    padding: 10px 30px;
+    background: var(--action);
+    color: var(--back);
+    border-radius: var(--border-radius);
+    border: 2px solid transparent;
+    cursor: pointer;
+    font-weight: bold;
+    display: none;
+}
+
+#next:hover{
+    background: var(--back);
+    border: 2px solid var(--action);
+    color: var(--action);
+}
+
+#next.active{
+    display: block;
+}
+
+.jeu{
+    border-top: 2px solid transparent;
+    background: #ffffff;
+    padding-top: 40px;
+    padding: 20px;
+    border-radius: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    box-shadow: 3px 3px 11px var(--primary) ,  3px 3px 5px var(--secondary);
+    animation: begin 0.7s linear forwards;
+    visibility: hidden;
+}
+
+.jeu.active{
+    visibility: visible;
+    animation: begin 0.7s linear forwards;
+}
+
+.button{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn-joueur, .btn-ordi{
+    border-radius: 15px;
+}
+
+.btn-joueur{
+    cursor: pointer;
+    background:var(--primary);
+    border: 2.5px solid transparent;
+    color: #fff;
+}
+
+
+.btn-joueur:hover{
+    color: var(--primary);
+    background: var(--back);
+    border: 2.5px solid var(--primary);
+}
+
+.button p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.button i{
+    font-size: 40px;
+    
+}
+
+.button:not(:last-child){
+    margin-bottom: 40px;
+}
+
+
+.btn-joueur.desactivated{
+    background: var(--primary);
+    color: var(--back);
+    border: 2.5px solid var(--back);
+    cursor: default;
+}
+
+.button.btn-joueur.desactivated:hover,.btn-joueur.active{
+    color: inherit;
+}
+
+.btn-joueur.active{
+    color: var(--primary);
+    background: var(--back);
+    border: 2.5px solid var(--primary);
+}
+
+#score-ordinateur,
+.ordi{
+    color: var(--secondary)
+}
+
+.btn-ordi{
+    color: var(--secondary);
+    background: var(--secondary);
+    color: var(--back);
+    border: 2.5px solid var(--back);
+    cursor: default;
+}
+
+.btn-ordi.active{
+    background: var(--back);
+    border: 2.5px solid var(--secondary);
+    color: var(--secondary);
+    
+}

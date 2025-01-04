@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>@FredArt-PierreFeuilleCiseaux</title>
+</head>
+<body>
+
+
+    <div class="UserInfo">
+        <h3>Pierre Feuille Ciseaux</h3>
+        <div class="inputBtn">
+            <input type="text" id="Username" placeholder=" Votre nom..."><button id="btnOk">OK</button>
+        </div>
+    </div>
+    <div class="score">
+        <p id="user" >Vous</p>
+        <p class="ordi">IA</p>
+        <p id="score-joueur">0</p>
+        <p id="score-ordinateur">0</p>
+        <div class="" id="reset" >Recommencer</div>
+    </div>
+    <div class="action">
+        <p id="message">A vous de jouer !</p>
+        <div id="next">Tour suivant</div>
+    </div>
+    <div class="jeu">
+            <div class="choix">
+                <div class="button btn-joueur" id="pierre">
+                    <i class="far fa-hand-rock"></i>
+                    <p>Pierre</p>
+                </div>
+                <div class="button btn-joueur" id="feuille">
+                    <i class="far fa-hand-paper"></i>
+                    <p>Feuille</p>
+                </div>
+                <div class="button btn-joueur" id="ciseaux">
+                    <i class=" far  fa-hand-scissors"></i>
+                    <p>Ciseaux</p>
+                </div>
+            </div>
+    
+            <div class="choix">
+                <div class="button btn-ordi" id="opierre">
+                    <i class="far fa-hand-rock" ></i>
+                    <p>Pierre</p>
+            </div>
+            <div class="button btn-ordi" id="ofeuille">
+                <i class="far fa-hand-paper" ></i>
+                <p>Feuille</p>
+            </div>
+            <div class="button btn-ordi" id="ociseaux">
+                <i class=" far  fa-hand-scissors"></i>
+                <p>Ciseaux</p>
+            </div>
+            </div>
+     </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
